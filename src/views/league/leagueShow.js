@@ -20,7 +20,7 @@ export default function ()
     
     return (
         <Fragment>
-            
+                        
             {league.loading && <div className="loader"></div>}
 
             {league.data && 
@@ -44,7 +44,7 @@ export default function ()
                 </Fragment>
             }
 
-            {league.error && <div style={{textAlign: 'center'}}>No data found</div>}
+            {league.error && <div style={{textAlign: 'center'}}>{league.error.message}</div>}
 
         </Fragment>
     );
@@ -63,9 +63,10 @@ background-size: cover;
 background-position: 50% 100%;
 width: 100%;
 position: relative;
+text-align: center;
 `
 const LeagueLogo = styled.div`
-float: left;
+margin: auto;
 height: 150px;
 width: 150px;
 img {
@@ -75,7 +76,6 @@ img {
 `
 
 const LeagueText = styled.div`
-float: left;
 padding: 20px;
 color: #fff;
 `

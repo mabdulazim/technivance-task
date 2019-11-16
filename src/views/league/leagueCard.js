@@ -21,7 +21,7 @@ const League = styled.div`
 -webkit-box-align: center;
 align-items: center;
 background-color: rgb(255, 255, 255);
-height: 100px;
+height: 90px;
 margin-bottom: 15px;
 padding: 10px;
 position: relative;
@@ -30,15 +30,19 @@ const LeagueLogo = styled.div`
 float: left;
 height: 100%;
 img {
-    width: 80px; 
-    height: 80px;
+    width: 60px; 
+    height: 60px;
 }
 `
 
 const LeagueText = styled.div`
+width: calc(100% - 60px);
 float: left;
 height: 100%;
 padding: 10px;
+overflow: hidden;
+text-overflow: ellipsis;
+
 span {
     color: #000;
     font-size: 14px;

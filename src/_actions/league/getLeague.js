@@ -12,7 +12,7 @@ const onFailed = (dispatch, error) =>
 };
   
 const handleResponse = (dispatch, response) => 
-{
+{    
     if (response.status === 200) 
     {
         onSuccess(dispatch, response.data);

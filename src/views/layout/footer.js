@@ -10,7 +10,7 @@ export default function FooterComponent()
             <div className="container">
                 <Copyright>
                     <span>
-                        <Link to="/">غاوي كورة</Link> © 2019
+                        <Link to="/">Football Leagues</Link> © 2019
                     </span>
                     <Link to="/" id="footer-logo">
                         <img src={Logo} alt="logo" />

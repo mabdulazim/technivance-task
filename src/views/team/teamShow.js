@@ -14,7 +14,6 @@ export default function ()
 
     useEffect(() => 
     {
-        document.title = !team.loading ? team.data.name  : `-`;
         dispatch(getTeam(params.id));
     }, [dispatch, params]);
     
@@ -44,7 +43,7 @@ export default function ()
                 </Fragment>
             }
 
-            {team.error && <div style={{textAlign: 'center'}}>No data found</div>}
+            {team.error && <div style={{textAlign: 'center'}}>{team.error.message}</div>}
 
         </Fragment>
     );
@@ -63,9 +62,10 @@ background-size: cover;
 background-position: 50% 100%;
 width: 100%;
 position: relative;
+text-align: center;
 `
 const TeamLogo = styled.div`
-float: left;
+margin: auto;
 height: 150px;
 width: 150px;
 img {
@@ -75,7 +75,6 @@ img {
 `
 
 const TeamText = styled.div`
-float: left;
 padding: 20px;
 color : #fff;
 `

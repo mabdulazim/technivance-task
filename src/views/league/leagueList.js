@@ -20,10 +20,11 @@ export default function ()
 
             {leagues.loading && <div className="loader"></div>}
 
+            {leagues.data && 
             <Row>
                 {leagues.data.map((league, i) => {
                     return(
-                        <Col key={i} xs={6} sm={6} md={4} lg={3}>
+                        <Col key={i} xs={12} sm={6} md={4} lg={3}>
                             <LeagueCard 
                                 id={league.id}
                                 name={league.name} 
@@ -33,6 +34,9 @@ export default function ()
                     );
                 })}
             </Row>
+            }
+
+            {leagues.error && <div style={{textAlign: 'center'}}>{leagues.error.message}</div>}
 
         </Fragment>
     );

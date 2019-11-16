@@ -9,10 +9,7 @@ export default function HeaderComponent()
             <div className="container">
                 <Menu>
                     <li>
-                        <Link to="/">Matches</Link>
-                    </li>
-                    <li>
-                        <Link to="/leagues">Leagues</Link>
+                        <Link to="/">Leagues</Link>
                     </li>
                     <li>
                         <Link to="/contact-us">Contact Us</Link>

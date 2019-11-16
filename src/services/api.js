@@ -18,8 +18,17 @@ export default function api(method, url)
     {
         return response;
     })
-    .catch(function(error) 
+    .catch((error) =>
     {
+        if(!error.response)
+        {
+            return {
+                status : 429,
+                data   : {
+                    message : 'Too many attempts'
+                }
+            }
+        }
         return error.response;
     });
 }

@@ -30,7 +30,7 @@ export const getTeam = (teamId) =>
         dispatch({ type:CONST.TEAM_SHOW_REQUEST });
           
         getTeamData(teamId).then((response) => 
-            handleResponse(dispatch, response)
+            handleResponse(dispatch, response) 
         );  
     };
 }
