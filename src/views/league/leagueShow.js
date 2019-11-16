@@ -14,7 +14,6 @@ export default function ()
 
     useEffect(() => 
     {
-        document.title = league.data ? league.data.name : 'a';
         dispatch(getLeague(params.id));
     }, [dispatch, params]);
     
